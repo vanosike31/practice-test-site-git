@@ -1,0 +1,105 @@
+Embed Font:
+<link href="https://fonts.googleapis.com/css?family=Saira" rel="stylesheet"> 
+
+Specify in CSS:
+font-family: 'Saira', sans-serif;
+
+
+Here's a general overview that should cover most programming language concepts (so it should answer "what is code" pretty fully).
+
+Variables
+
+Programmers hold values in variables which you reference by name.
+
+In javascript, a variable declaration looks like this
+
+var x = 0; // the variable 'x' is set to value '0'
+
+In C++/C/Java the same variable declaration would look like this.
+
+int x = 0; // an integer variable 'x' is set to value '0'
+
+If a language has a concept of different kinds of variables, it is called a Static Typed language. In the C++/C/Java example, the 'int' part tells the compiler (the thing that takes code and turns it into what the processor runs) what kind of variable it is, in this case its an integer (number without a decimal). Some examples of the 'kinds' of variables you can have:
+
+* A whole number         | int     | example: 0, -1, 1
+* A bunch of characters  | string  | example: "HelloWorld!"
+* A character/letter     | char    | example : 'a', '@', '1'
+* A partial number       | float   | example: 1.23, 1.0, -0.3
+* A generic 'kind'       | object  | 
+
+If the language just has one kind of variable and you have to keep track of what is in it then the language would be Dynamically Typed. In the javascript example, the 'var' part would be the dynamic variable.
+
+C# actually combines the two types and lets you use the 'var' type in certain circumstances so some languages don't fit the classifications nicely.
+
+Functions
+
+A function is like a little machine that you build that takes inputs and gives you outputs. For example, a breakfast making function might take 'eggs', 'bacon' and 'bread' as it's inputs and output 'healthy_breakfast'. As a programmer, you know that if you give a function certain inputs, you will get a certain meaningful output as a result. This lets you take a big task like checking out a library book and break it down into little tasks that are easier to solve.
+
+For checking out library books, you might split up the job like this:
+
+    Scan the library card and check they are allowed to checkout books. Input: their card number Output: true or false
+
+    If the are allowed then scan the book and load it's database entry. Input: the book number Output: the books database entry
+
+    Once it's loaded, add the persons name to who has it and mark it as checked out. Input: persons name, book entry Output: finished book entry
+
+    Save the book entry back to the database and close the connection. Input: the finished book entry Output: true/false finished successfully
+
+In languages like C++/C/Java you would declare a function that takes two numbers, adds them together and returns the result like this:
+
+int addNumbers (int a, int b) { return a + b; }
+
+The '{' and '}' mark the beginning and end of the function and the 'return' statement exits the function to return the value right behind it. The ';' is used to mark the end of a line since whitespace (tabs, spaces and returns) are ignored in those three languages and quite a few others. That's what lets
+
+int addNumbers (int a, int b) { 
+    return a + b;
+}
+
+mean the exact same thing as the function above it.
+
+Classes
+
+This really just applies to Strictly Typed languages but some of the concepts carry over to others as well. A class is where you create a new 'kind' of variable. If there were lots of values you needed to bundle up since they were all talking about the same thing then a class is what you would need. The 'Person' example is used a lot and is really good.
+
+class Person {
+    public string name;
+    public string address;
+    public string phone;
+    public date birthday;
+
+    // Creates an empty person, properties set later
+    public Person () {}  
+
+    // Creates a person using the passed values to set the properties
+    public Person(string Name, string Address, string Phone, date Birthday) {
+        name = Name;
+        address = Address;
+        phone = Phone;
+    }
+ }
+
+In the above example, there is a new kind of variable called Person. Here's some examples of using this new Person type.
+
+Person joe = new Person(); //creates an empty person 
+joe.name = "Joe";  // sets the name to "Joe"
+
+String address = joe.address; 
+// the variable 'address' is empty since joe's 
+// address value hasn't been assigned yet.
+
+//creates a new person 'bob' and sets the values
+Person bob = new Person("Bob", "phone#", "Address");
+
+address = bob.address;
+// the variable 'address' was empty and now equals "Address" since
+// bob had the value set
+
+There's a bit more to all of this obviously but if you keep those basic concepts in mind when thinking about writing a program, it's a lot easier. The trick to becoming a good programmer is getting REALLY good at breaking down a problem to it's simplest distinct parts so that solving the little problems ends up solving the big one. Once you can start thinking naturally like that, the programs almost write themselves.
+
+TL;DR
+
+Variables = buckets to store data
+
+Functions = little machines to make helpful output from inputs
+
+Classes = lets you make special customized buckets to store similar data

@@ -1,0 +1,48 @@
+
+/*Changing color*/
+
+h1 {
+	color: orange
+} 
+
+ul {
+	color: red;
+}
+
+p {
+	color: red;
+}
+
+/*Changing Font*/
+html {
+	font-size: 10px; /* px means 'pixels': the base font size is now 10 pixels high  */
+  font-family: 'Saira', sans-serif; /*second info from Google*/
+  background-color: #2CC506
+
+}
+
+
+h1 {
+	font-size: 60px;
+	text-align: center;
+	margin: 0 auto;
+
+}
+
+p, ul {
+	font-size: 45px;
+	line-height: 2;
+	letter-spacing: 1px;
+}
+
+img {
+	margin: 0 auto;
+	display: block;
+}
+
+body {
+	margin: 0 auto;
+	border: 5px orange;
+	width: 1200px;
+
+}
